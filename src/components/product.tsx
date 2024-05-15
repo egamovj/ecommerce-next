@@ -2,19 +2,24 @@
 "use client";
 
 import React, { FC } from "react";
+import Link from "next/link";
+import Image from "next/image";
 import { ProductType } from "@/interfaces";
+import CustomImage from "./image";
 
 const Product: FC<{ product: ProductType }> = ({ product }) => {
   console.log(product);
 
   return (
-    <div className="bg-gray-100 p-6 rounded-lg">
-      <img
-        className="h-40 rounded w-full object-cover object-center mb-6"
-        src="https://dummyimage.com/721x401"
-        alt="content"
-      />
-      <h3 className="tracking-widest text-indigo-500 text-xs font-medium title-font">
+    <Link
+      href={"/product/${product.id}"}
+      className="h-96 flex flex-col p-6 rounded-lg group hover:scale-105 transition-transform ease-out duration-200 border"
+    >
+      <div className="relative max-h-80 flex-1">
+        <CustomImage product={product} fill />
+      </div>
+
+      <h3 className="tracking-widest mt-5 text-indigo-500 text-xs font-medium title-font">
         {product.category}
       </h3>
 
@@ -25,7 +30,7 @@ const Product: FC<{ product: ProductType }> = ({ product }) => {
       <p className="leading-relaxed text-base line-clamp-3">
         {product.description}
       </p>
-    </div>
+    </Link>
   );
 };
 
