@@ -21,7 +21,7 @@ const ProductDetailedPage = () => {
     getData();
   }, [id]);
 
-  return <div></div>;
+  return <div>{product?.title}</div>;
 };
 
 export default ProductDetailedPage;
