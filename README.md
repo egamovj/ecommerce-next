@@ -1,5 +1,5 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-<h2>
+<h2 align="start">
   This project was not completed until the end because of a problem with fakestoreapi, the single page is protected, which means that the id cannot be retrieved.
 </h2>
 
